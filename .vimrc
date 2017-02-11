@@ -73,11 +73,11 @@ Plugin 'vim-ruby/vim-ruby'
 syntax on             " Enable syntax highlighting
 "filetype on           " Enable filetype detection
 "filetype indent on    " Enable filetype-specific indenting
-filetype plugin on    " Enable filetype-specific plugins
+"filetype plugin on    " Enable filetype-specific plugins
 
 "execute pathogen#infect()
 
-color jellybeans
+color PaperColor
 
 set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
@@ -121,3 +121,8 @@ let g:ackprg = 'ag --vimgrep'
 :nnoremap <leader>d :Tagbar<CR>
 :nnoremap <leader>q :tabnew<CR>
 :nnoremap <leader>w :exec '!' . 'docker exec -it gdeslondocker_app_1 bash -l -c "spec ' . '%:.' . ':' . line('.') . '"'<CR>
+
+" from 192.168.33.10
+set grepprg=ack
+set wildignore+=*/node_modules/*
+set number

@@ -126,3 +126,7 @@ let g:ackprg = 'ag --vimgrep'
 set grepprg=ack
 set wildignore+=*/node_modules/*
 set number
+
+" Это такой рекомендуемый хак в частности для работы подсветки coffee
+filetype off
+filetype on

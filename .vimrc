@@ -67,7 +67,7 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'pangloss/vim-javascript'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'ternjs/tern_for_vim'
-
+Plugin 'easymotion/vim-easymotion'
 """"""""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -80,7 +80,14 @@ syntax on             " Enable syntax highlighting
 
 "execute pathogen#infect()
 
-color PaperColor
+
+if has('gui_running')
+    set background=light
+    colorscheme solarized
+else
+    set background=dark
+    colorscheme jellybeans
+endif
 
 set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar

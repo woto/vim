@@ -114,6 +114,7 @@ au BufRead,BufNewFile {*.god,*.thor,*.pill,*.axlsx} set ft=ruby
 
 let g:ctrlp_max_files = 10000
 let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:100'
+let g:ctrlp_working_path_mode = 0
 
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
@@ -140,3 +141,6 @@ set number
 " Это такой рекомендуемый хак в частности для работы подсветки coffee
 filetype off
 filetype on
+
+" vim-airline
+set laststatus=2 

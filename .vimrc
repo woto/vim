@@ -46,7 +46,7 @@ filetype plugin indent on    " required
 
 Plugin 'lukaszkorecki/CoffeeTags'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'mileszs/ack.vim'
+Plugin 'ggreer/the_silver_searcher'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'wincent/command-t'
 Plugin 'kien/ctrlp.vim'
@@ -116,8 +116,6 @@ let g:ctrlp_max_files = 10000
 let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:100'
 let g:ctrlp_working_path_mode = 0
 
-let g:ackprg = 'ag --nogroup --nocolor --column'
-
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
@@ -127,7 +125,8 @@ set tags=./tags;
 
 " Use ack instead of grep
 "set grepprg=ack
-let g:ackprg = 'ag --vimgrep'
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
 
 :nnoremap <leader>d :Tagbar<CR>
 :nnoremap <leader>q :tabnew<CR>

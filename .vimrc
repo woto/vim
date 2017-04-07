@@ -47,6 +47,7 @@ filetype plugin indent on    " required
 Plugin 'lukaszkorecki/CoffeeTags'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'ggreer/the_silver_searcher'
+Plugin 'mileszs/ack.vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'wincent/command-t'
 Plugin 'kien/ctrlp.vim'
@@ -116,10 +117,10 @@ let g:ctrlp_max_files = 10000
 let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:100'
 let g:ctrlp_working_path_mode = 0
 
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
+"map <Leader>t :call RunCurrentSpecFile()<CR>
+"map <Leader>s :call RunNearestSpec()<CR>
+"map <Leader>l :call RunLastSpec()<CR>
+"map <Leader>a :call RunAllSpecs()<CR>
 
 set tags=./tags;
 

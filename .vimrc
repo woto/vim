@@ -94,11 +94,15 @@ set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
 set guioptions-=L  "remove left-hand scroll bar
-set tabstop=2      " An indentation every four columns
-set softtabstop=2  " Let backspace delete indent
-set shiftwidth=2
+"set tabstop=2      " An indentation every four columns
+"set softtabstop=2  " Let backspace delete indent
+"set shiftwidth=2
 set expandtab
 set autoindent
+
+autocmd Filetype html setlocal ts=2 sts=2 sw=2
+autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
+autocmd Filetype javascript setlocal ts=4 sts=4 sw=4
 
 :let mapleader=","
 set runtimepath^=~/.vim/bundle/ctrlp.vim

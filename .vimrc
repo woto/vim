@@ -60,7 +60,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-bundler'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-fugitive'
-Plugin 'suan/vim-instant-markdown'
+"Plugin 'suan/vim-instant-markdown'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'tpope/vim-rails'
@@ -94,9 +94,9 @@ set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
 set guioptions-=L  "remove left-hand scroll bar
-"set tabstop=2      " An indentation every four columns
-"set softtabstop=2  " Let backspace delete indent
-"set shiftwidth=2
+set tabstop=2      " An indentation every four columns
+set softtabstop=2  " Let backspace delete indent
+set shiftwidth=2
 set expandtab
 set autoindent
 
@@ -117,7 +117,8 @@ let g:ctrlp_custom_ignore = {
 
 au BufRead,BufNewFile {*.god,*.thor,*.pill,*.axlsx} set ft=ruby
 
-let g:ctrlp_max_files = 10000
+let g:ctrlp_max_files = 20000
+let g:ctrlp_max_depth=5
 let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:100'
 let g:ctrlp_working_path_mode = 0
 

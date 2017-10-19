@@ -44,7 +44,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-bundler'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-fugitive'
-"Plugin 'suan/vim-instant-markdown'
+Plugin 'suan/vim-instant-markdown'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'tpope/vim-rails'
@@ -82,7 +82,7 @@ syntax on             " Enable syntax highlighting
 
 
 if has('gui_running')
-    set background=light
+    set background=dark
     colorscheme solarized
 else
     set background=dark
@@ -99,8 +99,8 @@ set shiftwidth=2
 set expandtab
 set autoindent
 
-autocmd Filetype html setlocal ts=2 sts=2 sw=2
-autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
+"autocmd Filetype html setlocal ts=2 sts=2 sw=2
+"autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
 autocmd Filetype javascript setlocal ts=4 sts=4 sw=4
 
 :let mapleader=","
@@ -117,7 +117,7 @@ let g:ctrlp_custom_ignore = {
 au BufRead,BufNewFile {*.god,*.thor,*.pill,*.axlsx} set ft=ruby
 
 let g:ctrlp_max_files = 20000
-let g:ctrlp_max_depth=5
+let g:ctrlp_max_depth = 5
 let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:100'
 let g:ctrlp_working_path_mode = 0
 
@@ -146,5 +146,9 @@ set number
 filetype off
 filetype on
 
+set guifont=Hack
+
 " vim-airline
 set laststatus=2 
+let g:airline_powerline_fonts = 1
+"let g:airline_skip_empty_sections = 0

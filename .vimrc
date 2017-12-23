@@ -44,7 +44,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-bundler'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-fugitive'
-"Plugin 'suan/vim-instant-markdown'
+Plugin 'suan/vim-instant-markdown'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'tpope/vim-rails'
@@ -53,6 +53,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'ternjs/tern_for_vim'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'vim-syntastic/syntastic'
 """"""""""""""""""""""""""""""""""""""""""""""""""
 
 " All of your Plugins must be added before the following line
@@ -146,9 +147,19 @@ set number
 filetype off
 filetype on
 
-set guifont=Hack
-
 " vim-airline
 set laststatus=2 
 let g:airline_powerline_fonts = 1
 "let g:airline_skip_empty_sections = 0
+
+" vim-syntastic/syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+let g:syntastic_javascript_checkers = ['eslint']

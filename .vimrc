@@ -54,6 +54,8 @@ Plugin 'jelera/vim-javascript-syntax'
 Plugin 'ternjs/tern_for_vim'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'vim-syntastic/syntastic'
+Plugin 'xolox/vim-easytags'
+Plugin 'xolox/vim-misc'
 """"""""""""""""""""""""""""""""""""""""""""""""""
 
 " All of your Plugins must be added before the following line
@@ -147,9 +149,13 @@ set number
 filetype off
 filetype on
 
+
 " vim-airline
 set laststatus=2 
-let g:airline_powerline_fonts = 1
+if has('gui_running')
+  let g:airline_powerline_fonts = 1
+  set guifont=Hack
+end
 "let g:airline_skip_empty_sections = 0
 
 " vim-syntastic/syntastic
@@ -163,3 +169,9 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 let g:syntastic_javascript_checkers = ['eslint']
+
+" tern
+"enable keyboard shortcuts
+let g:tern_map_keys=1
+"show argument hints
+let g:tern_show_argument_hints='on_hold'

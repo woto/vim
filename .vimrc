@@ -56,6 +56,9 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'xolox/vim-easytags'
 Plugin 'xolox/vim-misc'
+Plugin 'posva/vim-vue'
+Plugin 'terryma/vim-multiple-cursors'
+
 """"""""""""""""""""""""""""""""""""""""""""""""""
 
 " All of your Plugins must be added before the following line
@@ -114,7 +117,7 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 "endif
 
 let g:ctrlp_custom_ignore = {
-    \ 'dir':  'public\/uploads\|system\/submodules\|vendor',
+    \ 'dir':  'public\/uploads\|system\/submodules\|vendor\|public\/packs',
     \ 'file': '\.exe$\|\.so$\|\.dll$\|\.pyc$' }
 
 au BufRead,BufNewFile {*.god,*.thor,*.pill,*.axlsx} set ft=ruby

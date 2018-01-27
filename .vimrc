@@ -178,3 +178,12 @@ let g:syntastic_javascript_checkers = ['eslint']
 let g:tern_map_keys=1
 "show argument hints
 let g:tern_show_argument_hints='on_hold'
+
+" markdown
+let g:vim_markdown_folding_disabled=1
+
+" syntastic
+let g:syntastic_quiet_messages = { "!level":  "errors" }
+"        \ "type":    "style",
+"        \ "regex":   '\m\[C03\d\d\]',
+"        \ "file:p":  ['\m^/usr/include/', '\m\c\.h$'] }

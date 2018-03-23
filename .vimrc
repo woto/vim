@@ -58,6 +58,7 @@ Plugin 'xolox/vim-easytags'
 Plugin 'xolox/vim-misc'
 Plugin 'posva/vim-vue'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'tpope/vim-surround'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -187,3 +188,8 @@ let g:syntastic_quiet_messages = { "!level":  "errors" }
 "        \ "type":    "style",
 "        \ "regex":   '\m\[C03\d\d\]',
 "        \ "file:p":  ['\m^/usr/include/', '\m\c\.h$'] }
+
+" Сохранение значение глобального буффера после выхода
+" https://stackoverflow.com/questions/6453595/prevent-vim-from-clearing-the-clipboard-on-exit
+autocmd VimLeave * call system("xsel -ib", getreg('+'))
+set colorcolumn=120 " вертикальная линия после 120 символов

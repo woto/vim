@@ -108,7 +108,7 @@ set autoindent
 
 "autocmd Filetype html setlocal ts=2 sts=2 sw=2
 "autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
-autocmd Filetype javascript setlocal ts=4 sts=4 sw=4
+"autocmd Filetype javascript setlocal ts=4 sts=4 sw=4
 
 :let mapleader=","
 set runtimepath^=~/.vim/bundle/ctrlp.vim
@@ -193,3 +193,7 @@ let g:syntastic_quiet_messages = { "!level":  "errors" }
 " https://stackoverflow.com/questions/6453595/prevent-vim-from-clearing-the-clipboard-on-exit
 autocmd VimLeave * call system("xsel -ib", getreg('+'))
 set colorcolumn=120 " вертикальная линия после 120 символов
+
+" Нормальное автозаполнение команд
+set wildignorecase
+set wildmenu

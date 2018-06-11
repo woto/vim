@@ -31,8 +31,8 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'lukaszkorecki/CoffeeTags'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'ggreer/the_silver_searcher'
-Plugin 'mileszs/ack.vim'
+"Plugin 'ggreer/the_silver_searcher'
+"Plugin 'mileszs/ack.vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'kien/ctrlp.vim'
 Plugin 'nikvdp/ejs-syntax'
@@ -137,7 +137,7 @@ set tags=./tags;
 
 " Use ack instead of grep
 "set grepprg=ack
-let g:ackprg = 'ag --nogroup --nocolor --column'
+"let g:ackprg = 'ag --nogroup --nocolor --column'
 
 
 :nnoremap <leader>d :Tagbar<CR>
@@ -145,8 +145,9 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 :nnoremap <leader>w :exec '!' . 'docker exec -it gdeslondocker_app_1 bash -l -c "spec ' . '%:.' . ':' . line('.') . '"'<CR>
 
 " from 192.168.33.10
-set grepprg=ack
-set wildignore+=*/node_modules/*
+"set grepprg=ack
+"set wildignore+=*/node_modules/*
+
 set number
 
 " Это такой рекомендуемый хак в частности для работы подсветки coffee
@@ -200,3 +201,8 @@ set wildmenu
 
 " Подсветка лишних пробелов в конце
 let ruby_space_errors = 1
+
+" Отключает автоматическое открытие редактируемого файла в браузере
+" т.о. чтобы открыть preview, необходимо выполнить :InstantMarkdownPreview
+let g:instant_markdown_autostart = 0 
+

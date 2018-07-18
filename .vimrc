@@ -54,7 +54,7 @@ Plugin 'jelera/vim-javascript-syntax'
 Plugin 'ternjs/tern_for_vim'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'vim-syntastic/syntastic'
-Plugin 'xolox/vim-easytags'
+"Plugin 'xolox/vim-easytags'
 Plugin 'xolox/vim-misc'
 Plugin 'posva/vim-vue'
 Plugin 'terryma/vim-multiple-cursors'
@@ -133,7 +133,7 @@ let g:ctrlp_working_path_mode = 0
 "map <Leader>l :call RunLastSpec()<CR>
 "map <Leader>a :call RunAllSpecs()<CR>
 
-set tags=./tags;
+"set tags=./tags;
 
 " Use ack instead of grep
 "set grepprg=ack
@@ -205,4 +205,3 @@ let ruby_space_errors = 1
 " Отключает автоматическое открытие редактируемого файла в браузере
 " т.о. чтобы открыть preview, необходимо выполнить :InstantMarkdownPreview
 let g:instant_markdown_autostart = 0 
-

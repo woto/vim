@@ -44,7 +44,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-bundler'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-fugitive'
-Plugin 'suan/vim-instant-markdown'
+Plugin 'shime/vim-livedown'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'tpope/vim-rails'
@@ -201,7 +201,3 @@ set wildmenu
 
 " Подсветка лишних пробелов в конце
 let ruby_space_errors = 1
-
-" Отключает автоматическое открытие редактируемого файла в браузере
-" т.о. чтобы открыть preview, необходимо выполнить :InstantMarkdownPreview
-let g:instant_markdown_autostart = 0 
